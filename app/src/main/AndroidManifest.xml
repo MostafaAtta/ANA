@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atta.ana">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".classes.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/ana"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ana"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".PasswordResetActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PersonalActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ContactActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".BusinessActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MedicalActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SearchActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".OfficialPartyActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".OfficialDocsActivity" />
+        <activity android:name=".PartyDetailsActivity"
+            android:parentActivityName=".MainActivity"></activity>
+    </application>
+
+</manifest>
